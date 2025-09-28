@@ -1,5 +1,6 @@
 const express = require("express")
 const authMiddleware = require("../middleware/authMiddleware")
+const { validateImageData } = require("../middleware/imageMiddleware")
 const Hero = require("../models/Hero")
 
 const router = express.Router()
@@ -16,7 +17,7 @@ router.get("/", async (req, res) => {
 })
 
 // Create/Update hero data (admin only)
-router.post("/", authMiddleware, async (req, res) => {
+router.post("/", authMiddleware, validateImageData, async (req, res) => {
   try {
     const heroData = req.body
 
