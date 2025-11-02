@@ -3,7 +3,6 @@ const validateImageData = (req, res, next) => {
   const processImageField = (fieldName) => {
     if (req.body[fieldName]) {
       const imageData = req.body[fieldName];
-      console.log(imageData);
       // Check if it's a Base64 image
       if (imageData.startsWith('data:image/')) {
         // Validate Base64 image format
