@@ -32,6 +32,8 @@ const conferencePaperRoutes = require("./routes/conferencePaperRoutes")
 const bookChapterRoutes = require("./routes/bookChapterRoutes")
 const galleryRoutes = require("./routes/galleryRoutes")
 const sliderRoutes = require("./routes/sliderRoutes")
+const path = require("path")
+
 
 dotenv.config()
 
@@ -104,6 +106,16 @@ app.use("/api/slider", sliderRoutes)
 app.get("/api/health", (req, res) => {
   res.json({ message: "Portfolio API is running!" })
 })
+
+// Serve frontend (Vite build)
+app.use(express.static(path.join(__dirname, "../portfolio-frontend/dist")))
+
+// For SPA routing, serve index.html for unknown routes except /api
+app.get(/^(?!\/api).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../portfolio-frontend/dist/index.html"))
+})
+
+
 
 // Start server
 app.listen(PORT, () => {
