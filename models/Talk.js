@@ -23,9 +23,11 @@ const talkSchema = new mongoose.Schema(
     url: {
       type: String,
     },
-    image: {
-      type: String,
-    },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

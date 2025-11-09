@@ -38,6 +38,11 @@ const educationSchema = new mongoose.Schema(
         type: String,
       },
     ],
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

@@ -99,8 +99,9 @@ const seedData = async () => {
     await Hero.create({
       name: "Dr. Aarti Milind Karande",
       tagline: "Assistant Professor & Researcher in Computer Engineering",
-      description: "Passionate educator and researcher specializing in Cloud Computing, Artificial Intelligence, and Machine Learning. Dedicated to mentoring students and contributing to innovative research at Sardar Patel Institute of Technology.",
-      profileImage: "https://picsum.photos/seed/1/600/400",
+      description:
+        "Passionate educator and researcher specializing in Cloud Computing, Artificial Intelligence, and Machine Learning. Dedicated to mentoring students and contributing to innovative research at Sardar Patel Institute of Technology.",
+      profileImage: "https://picsum.photos/seed/hero-profile/400/500",
       resumeUrl: "/resume.pdf",
       socials: {
         linkedin: "https://linkedin.com/in/aartikarande",
@@ -113,8 +114,9 @@ const seedData = async () => {
     // Seed About data
     await About.create({
       title: "About Me",
-      content: "I am an Assistant Professor at Sardar Patel Institute of Technology with a Ph.D. in Computer Engineering. My research focuses on enterprise architecture, business process agility, cloud computing, and artificial intelligence. I have developed frameworks for managing business process standardization and hold patents in enterprise architecture and innovation stove. My teaching philosophy emphasizes practical knowledge with industry-relevant skills to prepare students for real-world challenges in the IT industry.",
-      image: "https://picsum.photos/seed/2/600/400",
+      content:
+        "I am an Assistant Professor at Sardar Patel Institute of Technology with a Ph.D. in Computer Engineering. My research focuses on enterprise architecture, business process agility, cloud computing, and artificial intelligence. I have developed frameworks for managing business process standardization and hold patents in enterprise architecture and innovation stove. My teaching philosophy emphasizes practical knowledge with industry-relevant skills to prepare students for real-world challenges in the IT industry.",
+      image: "https://picsum.photos/seed/about-profile/600/400",
     })
 
     // Seed Experience data - Academic positions
@@ -125,9 +127,18 @@ const seedData = async () => {
         location: "Mumbai, Maharashtra, India",
         startDate: new Date("2007-07-01"),
         current: true,
-        description: "Teaching undergraduate and postgraduate courses in Computer Engineering. Mentoring students for academic projects and research publications.",
+        description:
+          "Teaching undergraduate and postgraduate courses in Computer Engineering. Mentoring students for academic projects and research publications.",
         technologies: ["Cloud Computing", "AI/ML", "Data Mining", "Software Engineering"],
-        achievements: ["Guided 50+ student projects", "Published 23+ research papers", "Mentored award-winning research teams"],
+        achievements: [
+          "Guided 50+ student projects",
+          "Published 23+ research papers",
+          "Mentored award-winning research teams",
+        ],
+        images: [
+          "https://picsum.photos/seed/experience1/800/600",
+          "https://picsum.photos/seed/experience2/800/600",
+        ],
       },
       {
         company: "Sardar Patel Institute of Technology",
@@ -138,6 +149,7 @@ const seedData = async () => {
         description: "Managed postgraduate admissions process and coordinated with academic committees",
         technologies: ["Academic Administration", "Student Recruitment"],
         achievements: ["Streamlined admission process", "Increased postgraduate enrollment"],
+        images: ["https://picsum.photos/seed/experience3/800/600"],
       },
       {
         company: "Sardar Patel Institute of Technology",
@@ -148,6 +160,10 @@ const seedData = async () => {
         description: "Coordinated campus placements and industry interactions for computer engineering students",
         technologies: ["Industry Relations", "Career Counseling"],
         achievements: ["Improved placement rates", "Established new industry partnerships"],
+        images: [
+          "https://picsum.photos/seed/experience4/800/600",
+          "https://picsum.photos/seed/experience5/800/600",
+        ],
       },
     ])
 
@@ -161,6 +177,11 @@ const seedData = async () => {
         startDate: new Date("2010-07-01"),
         endDate: new Date("2015-06-30"),
         description: "Doctoral research in enterprise architecture and business process agility",
+        images: [
+          "https://picsum.photos/seed/education1/800/600",
+          "https://picsum.photos/seed/education2/800/600",
+          "https://picsum.photos/seed/education3/800/600",
+        ],
       },
       {
         institution: "VJTI Mumbai",
@@ -170,6 +191,7 @@ const seedData = async () => {
         startDate: new Date("2005-07-01"),
         endDate: new Date("2007-05-31"),
         description: "Specialization in integrated service management using SOA",
+        images: ["https://picsum.photos/seed/education4/800/600", "https://picsum.photos/seed/education5/800/600"],
       },
       {
         institution: "Sardar Patel College of Engineering",
@@ -178,7 +200,8 @@ const seedData = async () => {
         location: "Mumbai, Maharashtra, India",
         startDate: new Date("2001-07-01"),
         endDate: new Date("2005-05-31"),
-      }
+        images: ["https://picsum.photos/seed/education6/800/600"],
+      },
     ])
 
     // Seed Skills data - Research and technical domains
@@ -211,21 +234,28 @@ const seedData = async () => {
     await Project.insertMany([
       {
         title: "Enterprise Architecture Framework for Business Process Agility",
-        description: "Research project developing frameworks for managing business process standardization and agility in enterprise architecture",
-        image: "https://picsum.photos/seed/3/600/400",
+        description:
+          "Research project developing frameworks for managing business process standardization and agility in enterprise architecture",
+        image: "https://picsum.photos/seed/project1/800/600",
         technologies: ["Enterprise Architecture", "Business Process Modeling", "SOA"],
         featured: true,
         startDate: new Date("2010-01-01"),
         endDate: new Date("2015-12-31"),
+        images: [
+          "https://picsum.photos/seed/project1a/800/600",
+          "https://picsum.photos/seed/project1b/800/600",
+          "https://picsum.photos/seed/project1c/800/600",
+        ],
       },
       {
         title: "Cloud Computing Integration in Academic Curriculum",
         description: "Development and implementation of cloud computing modules in computer engineering curriculum",
-        image: "https://picsum.photos/seed/4/600/400",
+        image: "https://picsum.photos/seed/project2/800/600",
         technologies: ["Cloud Computing", "Curriculum Development", "Academic Research"],
         featured: true,
         startDate: new Date("2018-01-01"),
         endDate: new Date("2020-12-31"),
+        images: ["https://picsum.photos/seed/project2a/800/600", "https://picsum.photos/seed/project2b/800/600"],
       },
     ])
 
@@ -240,6 +270,11 @@ const seedData = async () => {
         description: "Coordinating student chapter activities and technical events",
         achievements: ["Organized 10+ technical workshops", "Increased student participation in CSI activities"],
         website: "https://csi-india.org",
+        images: [
+          "https://picsum.photos/seed/volunteer1/800/600",
+          "https://picsum.photos/seed/volunteer2/800/600",
+          "https://picsum.photos/seed/volunteer3/800/600",
+        ],
       },
       {
         organization: "ISTE Student Chapter",
@@ -250,6 +285,7 @@ const seedData = async () => {
         description: "Guiding students in organizing technical events and competitions",
         achievements: ["Mentored winning teams in technical competitions", "Organized national level technical fest"],
         website: "https://iste.org",
+        images: ["https://picsum.photos/seed/volunteer4/800/600", "https://picsum.photos/seed/volunteer5/800/600"],
       },
     ])
 
@@ -265,7 +301,9 @@ const seedData = async () => {
         pages: "1-6",
         doi: "10.5120/20082-2345",
         url: "https://www.ijcaonline.org/archives/volume114/number15/20082-2345",
-        abstract: "This paper proposes a framework to manage business process standardization and agility in enterprise architecture context.",
+        abstract:
+          "This paper proposes a framework to manage business process standardization and agility in enterprise architecture context.",
+        images: ["https://picsum.photos/seed/publication1/800/600", "https://picsum.photos/seed/publication2/800/600"],
       },
       {
         title: "Integrated Service Management using Service Oriented Architecture",
@@ -277,7 +315,13 @@ const seedData = async () => {
         pages: "1982-1986",
         doi: "10.1234/ijera.2012.2195",
         url: "https://www.ijera.com/papers/Vol2_issue4/JZ2419821986.pdf",
-        abstract: "Research on integrated service management approaches using service oriented architecture principles.",
+        abstract:
+          "Research on integrated service management approaches using service oriented architecture principles.",
+        images: [
+          "https://picsum.photos/seed/publication3/800/600",
+          "https://picsum.photos/seed/publication4/800/600",
+          "https://picsum.photos/seed/publication5/800/600",
+        ],
       },
     ])
 
@@ -291,7 +335,9 @@ const seedData = async () => {
         filingDate: new Date("2015-03-10"),
         publicationDate: new Date("2016-09-15"),
         status: "Granted",
-        abstract: "Patent for enterprise architecture framework and innovation stove methodology for business process management.",
+        abstract:
+          "Patent for enterprise architecture framework and innovation stove methodology for business process management.",
+        images: ["https://picsum.photos/seed/patent1/800/600", "https://picsum.photos/seed/patent2/800/600"],
       },
     ])
 
@@ -303,6 +349,11 @@ const seedData = async () => {
         date: new Date("2018-03-15"),
         description: "Recognized for exceptional teaching contributions and student mentorship in computer engineering",
         category: "Professional",
+        images: [
+          "https://picsum.photos/seed/award1/800/600",
+          "https://picsum.photos/seed/award2/800/600",
+          "https://picsum.photos/seed/award3/800/600",
+        ],
       },
       {
         title: "Best Research Paper Award",
@@ -310,6 +361,7 @@ const seedData = async () => {
         date: new Date("2014-12-10"),
         description: "Award for outstanding research paper on enterprise architecture frameworks",
         category: "Academic",
+        images: ["https://picsum.photos/seed/award4/800/600", "https://picsum.photos/seed/award5/800/600"],
       },
     ])
 
@@ -322,6 +374,7 @@ const seedData = async () => {
         validUntil: new Date("2021-05-10"),
         credentialId: "COBIT5-CERT-2016",
         url: "https://www.isaca.org/certification/cobit-certification",
+        images: ["https://picsum.photos/seed/testscore1/800/600", "https://picsum.photos/seed/testscore2/800/600"],
       },
       {
         testName: "Agile Project Management Foundation",
@@ -330,6 +383,11 @@ const seedData = async () => {
         validUntil: new Date("2020-08-20"),
         credentialId: "APMG-AGILE-2015",
         url: "https://apmg-international.com/agilepm",
+        images: [
+          "https://picsum.photos/seed/testscore3/800/600",
+          "https://picsum.photos/seed/testscore4/800/600",
+          "https://picsum.photos/seed/testscore5/800/600",
+        ],
       },
     ])
 
@@ -359,6 +417,10 @@ const seedData = async () => {
         credentialId: "COBIT5-CERT-2016",
         url: "https://www.isaca.org/certification/cobit-certification",
         skills: ["IT Governance", "Process Management", "Framework Implementation"],
+        images: [
+          "https://picsum.photos/seed/certification1/800/600",
+          "https://picsum.photos/seed/certification2/800/600",
+        ],
       },
       {
         name: "Agile Project Management Foundation",
@@ -368,6 +430,11 @@ const seedData = async () => {
         credentialId: "APMG-AGILE-2015",
         url: "https://apmg-international.com/agilepm",
         skills: ["Agile Methodology", "Project Management", "Scrum"],
+        images: [
+          "https://picsum.photos/seed/certification3/800/600",
+          "https://picsum.photos/seed/certification4/800/600",
+          "https://picsum.photos/seed/certification5/800/600",
+        ],
       },
     ])
 
@@ -380,6 +447,7 @@ const seedData = async () => {
         certificateUrl: "https://nptel.ac.in/noc/certificates/",
         description: "Comprehensive course on cloud computing architectures, deployment models, and security aspects",
         skills: ["Cloud Architecture", "Virtualization", "Cloud Security", "Deployment Models"],
+        images: ["https://picsum.photos/seed/course1/800/600", "https://picsum.photos/seed/course2/800/600"],
       },
       {
         name: "Machine Learning Foundations",
@@ -388,6 +456,11 @@ const seedData = async () => {
         certificateUrl: "https://nptel.ac.in/noc/certificates/",
         description: "Fundamental concepts and algorithms in machine learning and pattern recognition",
         skills: ["Machine Learning", "Pattern Recognition", "Classification Algorithms", "Neural Networks"],
+        images: [
+          "https://picsum.photos/seed/course3/800/600",
+          "https://picsum.photos/seed/course4/800/600",
+          "https://picsum.photos/seed/course5/800/600",
+        ],
       },
     ])
 
@@ -400,6 +473,7 @@ const seedData = async () => {
         date: new Date("2023-02-15"),
         location: "Mumbai, India",
         url: "https://nacet.org/sessions/ml-transfer-learning",
+        images: ["https://picsum.photos/seed/talk1/800/600", "https://picsum.photos/seed/talk2/800/600"],
       },
       {
         title: "Business Modeling and Enterprise Architecture",
@@ -408,6 +482,11 @@ const seedData = async () => {
         date: new Date("2022-11-20"),
         location: "Pune, India",
         url: "https://industryacademiaconclave.in/sessions/business-modeling",
+        images: [
+          "https://picsum.photos/seed/talk3/800/600",
+          "https://picsum.photos/seed/talk4/800/600",
+          "https://picsum.photos/seed/talk5/800/600",
+        ],
       },
       {
         title: "Women in Technology and Entrepreneurship",
@@ -416,6 +495,7 @@ const seedData = async () => {
         date: new Date("2022-03-08"),
         location: "Mumbai, India",
         url: "https://womentechmakers.com/mumbai2022",
+        images: ["https://picsum.photos/seed/talk6/800/600"],
       },
     ])
 
@@ -429,6 +509,7 @@ const seedData = async () => {
         endDate: new Date("2023-08-31"),
         location: "Mumbai, India",
         skills: ["Research Methodology", "Academic Writing", "Paper Publication", "Mentoring"],
+        images: ["https://picsum.photos/seed/intern1/800/600", "https://picsum.photos/seed/intern2/800/600"],
       },
       {
         title: "Project Guide for Industry Internships",
@@ -438,6 +519,11 @@ const seedData = async () => {
         endDate: new Date("2023-05-31"),
         location: "Mumbai, India",
         skills: ["Project Guidance", "Industry Collaboration", "Student Evaluation", "Technical Mentoring"],
+        images: [
+          "https://picsum.photos/seed/intern3/800/600",
+          "https://picsum.photos/seed/intern4/800/600",
+          "https://picsum.photos/seed/intern5/800/600",
+        ],
       },
     ])
 
@@ -452,6 +538,12 @@ const seedData = async () => {
         location: "Mumbai, India",
         duration: "2 days",
         certificate: "/certificates/research-workshop-2023.pdf",
+        images: [
+          "https://picsum.photos/seed/workshop1/800/600",
+          "https://picsum.photos/seed/workshop2/800/600",
+          "https://picsum.photos/seed/workshop3/800/600",
+          "https://picsum.photos/seed/workshop4/800/600",
+        ],
       },
       {
         title: "Cloud Computing Applications in Industry",
@@ -462,6 +554,7 @@ const seedData = async () => {
         location: "Mumbai, India",
         duration: "1 day",
         certificate: "/certificates/cloud-workshop-2022.pdf",
+        images: ["https://picsum.photos/seed/workshop5/800/600", "https://picsum.photos/seed/workshop6/800/600"],
       },
     ])
 
@@ -476,6 +569,11 @@ const seedData = async () => {
         duration: "40 hours",
         certificate: "/certificates/ai-ml-fdp-2022.pdf",
         skills: ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Neural Networks"],
+        images: [
+          "https://picsum.photos/seed/training1/800/600",
+          "https://picsum.photos/seed/training2/800/600",
+          "https://picsum.photos/seed/training3/800/600",
+        ],
       },
       {
         title: "Advanced Research Methodology",
@@ -486,6 +584,7 @@ const seedData = async () => {
         duration: "30 hours",
         certificate: "/certificates/research-methodology-2021.pdf",
         skills: ["Research Design", "Statistical Analysis", "Data Collection", "Hypothesis Testing"],
+        images: ["https://picsum.photos/seed/training4/800/600", "https://picsum.photos/seed/training5/800/600"],
       },
     ])
 
@@ -498,6 +597,10 @@ const seedData = async () => {
         date: new Date("2023-01-20"),
         category: "Research",
         certificate: "/certificates/research-contribution-2023.pdf",
+        images: [
+          "https://picsum.photos/seed/appreciation1/800/600",
+          "https://picsum.photos/seed/appreciation2/800/600",
+        ],
       },
       {
         title: "Excellence in Student Mentoring",
@@ -506,6 +609,11 @@ const seedData = async () => {
         date: new Date("2022-12-15"),
         category: "Mentoring",
         certificate: "/certificates/mentoring-excellence-2022.pdf",
+        images: [
+          "https://picsum.photos/seed/appreciation3/800/600",
+          "https://picsum.photos/seed/appreciation4/800/600",
+          "https://picsum.photos/seed/appreciation5/800/600",
+        ],
       },
     ])
 
@@ -521,8 +629,10 @@ const seedData = async () => {
         publishDate: new Date("2015-03-15"),
         doi: "10.5120/20082-2345",
         url: "https://www.ijcaonline.org/archives/volume114/number15/20082-2345",
-        abstract: "This paper presents a comprehensive framework to manage business process standardization and agility in enterprise architecture context, addressing the challenges of dynamic business environments.",
+        abstract:
+          "This paper presents a comprehensive framework to manage business process standardization and agility in enterprise architecture context, addressing the challenges of dynamic business environments.",
         pdf: "/papers/enterprise-framework-2015.pdf",
+        images: ["https://picsum.photos/seed/journal1/800/600", "https://picsum.photos/seed/journal2/800/600"],
       },
       {
         title: "Integrated Service Management using Service Oriented Architecture",
@@ -534,8 +644,10 @@ const seedData = async () => {
         publishDate: new Date("2012-07-20"),
         doi: "10.1234/ijera.2012.2195",
         url: "https://www.ijera.com/papers/Vol2_issue4/JZ2419821986.pdf",
-        abstract: "Research paper exploring integrated service management approaches using service oriented architecture principles for improved business process integration.",
+        abstract:
+          "Research paper exploring integrated service management approaches using service oriented architecture principles for improved business process integration.",
         pdf: "/papers/service-management-2012.pdf",
+        images: ["https://picsum.photos/seed/journal3/800/600"],
       },
     ])
 
@@ -548,9 +660,15 @@ const seedData = async () => {
         publishDate: new Date("2020-11-10"),
         doi: "10.1234/research.2020.001",
         url: "https://researchrepository.edu/enterprise-patterns",
-        abstract: "This research paper explores various enterprise architecture patterns that facilitate successful digital transformation in organizations.",
+        abstract:
+          "This research paper explores various enterprise architecture patterns that facilitate successful digital transformation in organizations.",
         pdf: "/papers/ea-patterns-2020.pdf",
         keywords: ["Enterprise Architecture", "Digital Transformation", "Business Patterns", "Digital Strategy"],
+        images: [
+          "https://picsum.photos/seed/research1/800/600",
+          "https://picsum.photos/seed/research2/800/600",
+          "https://picsum.photos/seed/research3/800/600",
+        ],
       },
       {
         title: "Cloud Computing Adoption Framework for Educational Institutions",
@@ -559,9 +677,11 @@ const seedData = async () => {
         publishDate: new Date("2019-08-15"),
         doi: "10.1234/research.2019.002",
         url: "https://researchrepository.edu/cloud-education",
-        abstract: "Research paper presenting a comprehensive framework for cloud computing adoption in educational institutions with case studies.",
+        abstract:
+          "Research paper presenting a comprehensive framework for cloud computing adoption in educational institutions with case studies.",
         pdf: "/papers/cloud-education-2019.pdf",
         keywords: ["Cloud Computing", "Education Technology", "Adoption Framework", "Institutional Planning"],
+        images: ["https://picsum.photos/seed/research4/800/600", "https://picsum.photos/seed/research5/800/600"],
       },
     ])
 
@@ -575,9 +695,11 @@ const seedData = async () => {
         location: "Kolkata, India",
         doi: "10.1109/ICCCS.2014.123",
         url: "https://icccs2014.org/papers/business-process-agility",
-        abstract: "Conference paper presenting research on business process agility within enterprise architecture framework.",
+        abstract:
+          "Conference paper presenting research on business process agility within enterprise architecture framework.",
         pdf: "/papers/business-agility-icccs-2014.pdf",
         proceedings: "Proceedings of ICCCS 2014",
+        images: ["https://picsum.photos/seed/conference1/800/600", "https://picsum.photos/seed/conference2/800/600"],
       },
       {
         title: "Service Oriented Architecture for Integrated Management",
@@ -587,9 +709,15 @@ const seedData = async () => {
         location: "Mumbai, India",
         doi: "10.1234/NCAC.2012.045",
         url: "https://ncac2012.org/papers/soa-integrated-management",
-        abstract: "Paper discussing service oriented architecture approaches for integrated service management systems.",
+        abstract:
+          "Paper discussing service oriented architecture approaches for integrated service management systems.",
         pdf: "/papers/soa-management-ncac-2012.pdf",
         proceedings: "Proceedings of NCAC 2012",
+        images: [
+          "https://picsum.photos/seed/conference3/800/600",
+          "https://picsum.photos/seed/conference4/800/600",
+          "https://picsum.photos/seed/conference5/800/600",
+        ],
       },
     ])
 
@@ -605,8 +733,10 @@ const seedData = async () => {
         publishDate: new Date("2021-03-15"),
         isbn: "978-3-031-12345-0",
         url: "https://link.springer.com/chapter/10.1007/978-3-031-12345-0_8",
-        abstract: "This chapter explores the evolution of enterprise architecture in the digital era and its impact on business transformation.",
+        abstract:
+          "This chapter explores the evolution of enterprise architecture in the digital era and its impact on business transformation.",
         pdf: "/papers/ea-digital-chapter-2021.pdf",
+        images: ["https://picsum.photos/seed/bookchapter1/800/600", "https://picsum.photos/seed/bookchapter2/800/600"],
       },
       {
         title: "Cloud Computing Frameworks for Academic Institutions",
@@ -618,8 +748,14 @@ const seedData = async () => {
         publishDate: new Date("2019-08-20"),
         isbn: "978-1-138-56789-0",
         url: "https://taylorandfrancis.com/books/emerging-tech-education",
-        abstract: "Book chapter discussing cloud computing frameworks specifically designed for academic and educational institutions.",
+        abstract:
+          "Book chapter discussing cloud computing frameworks specifically designed for academic and educational institutions.",
         pdf: "/papers/cloud-academic-chapter-2019.pdf",
+        images: [
+          "https://picsum.photos/seed/bookchapter3/800/600",
+          "https://picsum.photos/seed/bookchapter4/800/600",
+          "https://picsum.photos/seed/bookchapter5/800/600",
+        ],
       },
     ])
 
@@ -628,7 +764,7 @@ const seedData = async () => {
       {
         title: "Guest Lecture at National Conference",
         description: "Delivering technical session on machine learning and enterprise architecture",
-        image: "https://picsum.photos/seed/5/600/400",
+        image: "https://picsum.photos/seed/gallery1/800/600",
         category: "Speaking",
         date: new Date("2023-02-15"),
         featured: true,
@@ -637,7 +773,7 @@ const seedData = async () => {
       {
         title: "Research Team with Award",
         description: "With research team after receiving best paper award",
-        image: "https://picsum.photos/seed/6/600/400",
+        image: "https://picsum.photos/seed/gallery2/800/600",
         category: "Awards",
         date: new Date("2014-11-20"),
         featured: true,
@@ -646,7 +782,7 @@ const seedData = async () => {
       {
         title: "Workshop on Cloud Computing",
         description: "Conducting workshop on cloud computing applications",
-        image: "https://picsum.photos/seed/7/600/400",
+        image: "https://picsum.photos/seed/gallery3/800/600",
         category: "Workshop",
         date: new Date("2022-08-20"),
         featured: true,
@@ -655,7 +791,7 @@ const seedData = async () => {
       {
         title: "Faculty Development Program",
         description: "Participating in AI/ML faculty development program",
-        image: "https://picsum.photos/seed/8/600/400",
+        image: "https://picsum.photos/seed/gallery4/800/600",
         category: "Training",
         date: new Date("2022-05-10"),
         featured: false,
@@ -664,7 +800,7 @@ const seedData = async () => {
       {
         title: "Student Project Guidance",
         description: "Mentoring students on academic projects",
-        image: "https://picsum.photos/seed/9/600/400",
+        image: "https://picsum.photos/seed/gallery5/800/600",
         category: "Mentoring",
         date: new Date("2023-04-15"),
         featured: true,
@@ -672,36 +808,35 @@ const seedData = async () => {
       },
     ])
 
-    // Seed Slider data
     await Slider.create({
       isEnabled: true,
       images: [
         {
-          url: "https://picsum.photos/seed/10/1200/600",
+          url: "https://picsum.photos/seed/slider1/1200/600",
           title: "Research and Innovation",
           description: "Advancing knowledge through cutting-edge research",
           order: 0,
         },
         {
-          url: "https://picsum.photos/seed/11/1200/600",
+          url: "https://picsum.photos/seed/slider2/1200/600",
           title: "Academic Excellence",
           description: "Inspiring minds through quality education",
           order: 1,
         },
         {
-          url: "https://picsum.photos/seed/12/1200/600",
+          url: "https://picsum.photos/seed/slider3/1200/600",
           title: "Technology and Innovation",
           description: "Building the future with technology",
           order: 2,
         },
         {
-          url: "https://picsum.photos/seed/13/1200/600",
+          url: "https://picsum.photos/seed/slider4/1200/600",
           title: "Collaboration and Learning",
           description: "Growing together as a community",
           order: 3,
         },
         {
-          url: "https://picsum.photos/seed/14/1200/600",
+          url: "https://picsum.photos/seed/slider5/1200/600",
           title: "Enterprise Architecture",
           description: "Designing scalable solutions for enterprise",
           order: 4,

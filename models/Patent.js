@@ -35,6 +35,11 @@ const patentSchema = new mongoose.Schema(
     url: {
       type: String,
     },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

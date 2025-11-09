@@ -35,6 +35,11 @@ const researchPaperSchema = new mongoose.Schema(
         type: String,
       },
     ],
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

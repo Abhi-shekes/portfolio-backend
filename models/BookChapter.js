@@ -41,6 +41,11 @@ const bookChapterSchema = new mongoose.Schema(
     pdf: {
       type: String,
     },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

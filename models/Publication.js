@@ -29,6 +29,11 @@ const publicationSchema = new mongoose.Schema(
     abstract: {
       type: String,
     },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

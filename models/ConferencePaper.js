@@ -37,6 +37,11 @@ const conferencePaperSchema = new mongoose.Schema(
     proceedings: {
       type: String,
     },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

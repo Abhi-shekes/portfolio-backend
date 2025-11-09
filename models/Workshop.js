@@ -31,9 +31,11 @@ const workshopSchema = new mongoose.Schema(
     certificate: {
       type: String,
     },
-    image: {
-      type: String,
-    },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

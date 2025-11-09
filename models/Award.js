@@ -20,6 +20,11 @@ const awardSchema = new mongoose.Schema(
     url: {
       type: String,
     },
+    images: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,

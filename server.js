@@ -47,19 +47,7 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }))
 
 // Request Logger Middleware
 app.use((req, res, next) => {
-  console.log("----------------------------------------")
-  console.log(`Request Method: ${req.method}`)
-  console.log(`Request URL: ${req.originalUrl}`)
 
-  if (Object.keys(req.query).length > 0) {
-    console.log("Query Params:", req.query)
-  }
-
-  if (Object.keys(req.body).length > 0) {
-    console.log("Request Body:", req.body)
-  }
-
-  console.log("----------------------------------------")
   next()
 })
 
