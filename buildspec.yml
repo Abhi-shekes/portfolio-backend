@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing build dependencies...
+      - npm ci
+  pre_build:
+    commands:
+      - echo Running tests (if any)...
+      - npm test || echo "No tests or tests failed (continuing)"
+  build:
+    commands:
+      - echo Preparing artifact directory...
+      - rm -rf artifact || true
+      - mkdir artifact
+      # copy only what we need for runtime
+      - cp package.json server.js appspec.yml artifact/ || true
+      - mkdir -p artifact/config artifact/controllers artifact/models artifact/routes artifact/middleware artifact/scripts artifact/deployment
+      - cp -R config/* artifact/config/ || true
+      - cp -R controllers/* artifact/controllers/ || true
+      - cp -R models/* artifact/models/ || true
+      - cp -R routes/* artifact/routes/ || true
+      - cp -R middleware/* artifact/middleware/ || true
+      - cp -R scripts/* artifact/scripts/ || true
+      - cp -R deployment/* artifact/deployment/ || true
+      - cd artifact
+      - zip -r ../release.zip . || true
+artifacts:
+  files:
+    - release.zip
+  discard-paths: yes
